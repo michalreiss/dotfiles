@@ -1,0 +1,6 @@
+require('michau.plugin_config.catppuccin')
+require('michau.plugin_config.completions')
+require('michau.plugin_config.lualine')
+require('michau.plugin_config.lsp')
+require('michau.plugin_config.telescope')
+require('michau.plugin_config.treesitter')
