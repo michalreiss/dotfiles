@@ -26,7 +26,7 @@ return {
                 capabilities = capabilities
             })
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+			vim.keymap.set("n", "<leader>sd", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 			vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, {})
 		end,
