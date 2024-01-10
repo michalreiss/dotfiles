@@ -1,10 +1,13 @@
 vim.g.mapleader = " "
-vim.cmd("set number")
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=4")
-vim.cmd("set softtabstop=4")
-vim.cmd("set shiftwidth=4")
-vim.cmd("set clipboard=unnamedplus")
+vim.opt.number = true
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.clipboard = "unnamedplus"
+vim.opt.foldmethod = "expr"
+vim.opt.foldlevelstart = 99
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- global keymaps
 vim.keymap.set("n", "H", ":bprevious<CR>", {})
