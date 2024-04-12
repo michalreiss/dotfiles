@@ -1,8 +1,7 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
-config.colors = {}
-config.color_scheme = "Gruvbox dark, pale (base16)"
+config.color_scheme = "rose-pine"
 config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Regular", stretch = "Normal", style = "Normal" })
 config.font_size = 16.0
 config.enable_scroll_bar = false
