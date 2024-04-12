@@ -1,6 +1,7 @@
 return {
 	"leoluz/nvim-dap-go",
 	dependencies = {
+		"nvim-neotest/nvim-nio",
 		"mfussenegger/nvim-dap",
 		"rcarriga/nvim-dap-ui",
 		"theHamsta/nvim-dap-virtual-text",
