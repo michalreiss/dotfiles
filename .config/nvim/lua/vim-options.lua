@@ -25,7 +25,6 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move down a selection" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move up a selection" })
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous Diagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next Diagnostic message' })
-vim.keymap.set('n', '<leader>d', vim.diagnostic.setloclist, { desc = 'Open diagnostic Quickfix list' })
 
 -- yank highlighting
 vim.api.nvim_create_autocmd('TextYankPost', {
