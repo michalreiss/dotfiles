@@ -1,4 +1,3 @@
--- If you want insert `(` after select function or method item
 return {
     {
         "hrsh7th/nvim-cmp",
@@ -43,6 +42,13 @@ return {
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
                 },
+            })
+
+            cmp.setup.filetype({ "sql" }, {
+                sources = {
+                    { name = "vim-dadbod-completion" },
+                    { name = "buffer" },
+                }
             })
         end,
     },
