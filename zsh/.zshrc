@@ -8,7 +8,8 @@ source $ZSH/oh-my-zsh.sh
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+source <(fzf --zsh)
+
 # aliases
 alias vim='nvim'
 alias ls='colorls'
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'

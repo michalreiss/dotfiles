@@ -33,6 +33,19 @@ return {
                             },
                         },
                     })
+                elseif lsp == "templ" then
+                    local util = require("lspconfig.util")
+
+                    lspconfig[lsp].setup({
+                        capabilities = capabilities,
+                        default_config = {
+                            cmd = { "templ", "lsp" },
+                            filetypes = { "templ" },
+                            root_dir = function(fname)
+                                return util.root_pattern("go.work", "go.mod", ".git")(fname)
+                            end,
+                        },
+                    })
                 else
                     lspconfig[lsp].setup({
                         capabilities = capabilities,
