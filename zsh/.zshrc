@@ -1,14 +1,18 @@
 # oh-my-zsh
+# just aliases etc.
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="robbyrussell"
-plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-fzf-history-search)
 source $ZSH/oh-my-zsh.sh
+
+# starship
+eval "$(starship init zsh)"
 
 # GO
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
 source <(fzf --zsh)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # aliases
 alias vim='nvim'
