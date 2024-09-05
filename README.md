@@ -2,4 +2,11 @@
 - GNU Stow
 - fzf
 - ripgrep
+- cargo
+- go
+- zsh
+- oh-my-zsh
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+- neovim
 - ...
