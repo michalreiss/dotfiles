@@ -17,4 +17,3 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # aliases
 alias vim='nvim'
-alias ls='colorls'
