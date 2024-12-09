@@ -144,6 +144,7 @@ alt-1 = 'workspace dev'
 alt-2 = 'workspace web'
 alt-3 = 'workspace personal'
 alt-4 = 'workspace music'
+alt-equal = ['join-with left', 'layout accordion vertical']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = 'move-node-to-workspace dev --focus-follows-window'
