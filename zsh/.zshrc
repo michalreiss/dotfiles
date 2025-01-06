@@ -11,9 +11,12 @@ eval "$(starship init zsh)"
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
 
+# plugins
 source <(fzf --zsh)
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # aliases
 alias vim='nvim'
+
+bindkey -v
