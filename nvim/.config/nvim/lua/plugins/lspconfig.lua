@@ -35,6 +35,7 @@ return {
             lspconfig.gopls.setup({ capabilities = capabilities })
             lspconfig.htmx.setup({ capabilities = capabilities })
             lspconfig.templ.setup({ capabilities = capabilities })
+            lspconfig.terraformls.setup({ capabilities = capabilities })
             lspconfig.elixirls.setup({
                 capabilities = capabilities,
                 cmd = { "$HOME/.local/share/nvim/mason/packages/elixir-ls/language_server.sh" },

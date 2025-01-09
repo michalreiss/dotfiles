@@ -58,7 +58,7 @@ if.app-name-regex-substring = 'Messenger|Mail'
 run = 'move-node-to-workspace personal'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Tidal|ChatGPT'
+if.app-name-regex-substring = 'Music|ChatGPT'
 run = 'move-node-to-workspace music'
 
 # Possible values: (qwerty|dvorak)
