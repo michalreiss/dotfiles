@@ -7,6 +7,10 @@ brew install stow
 ```shell
 brew install fzf
 ```
+- bat
+```shell
+brew install bat
+```
 - ripgrep
 ```shell
 brew install ripgrep
@@ -19,11 +23,6 @@ brew install cargo
 ```shell
 brew install go
 ```
-- zsh
-```shell
-brew install zsh
-```
-- oh-my-zsh
 - zsh-autosuggestions
 ```shell
 brew install zsh-autosuggestions
@@ -32,8 +31,3 @@ brew install zsh-autosuggestions
 ```shell
 brew install zsh-syntax-highlighting
 ```
-- neovim
-```shell
-brew install neovim
-```
-- ...

@@ -1,19 +1,12 @@
+# vi mode
+bindkey -v
+
 # starship
 eval "$(starship init zsh)"
 
 # GO
 export GOPATH="$HOME/go"
 export PATH="$GOPATH/bin:$PATH"
-
-# plugins
-source <(fzf --zsh)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-alias cat=bat
-alias ls="ls --color=auto"
-alias la="ls -lAh"
-alias vim=nvim
 
 # git
 alias ga="git add -p"
@@ -29,4 +22,12 @@ alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bol
 alias ..="cd .."
 alias ...="cd ../.."
 
-bindkey -v
+alias cat=bat
+alias ls="ls --color=auto"
+alias la="ls -lAh"
+alias vim=nvim
+
+# plugins
+source <(fzf --zsh)
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

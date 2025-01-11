@@ -1,4 +1,5 @@
 cursor-color = white
+font-family = JetBrainsMono NFM Light
 font-size = 16
 macos-titlebar-style = hidden
 macos-option-as-alt = true
