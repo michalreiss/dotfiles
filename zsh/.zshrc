@@ -1,12 +1,26 @@
 # vi mode
 bindkey -v
+bindkey '^y' autosuggest-accept
+
+# history
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=5000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt incappendhistory
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
 # starship
 eval "$(starship init zsh)"
 
 # GO
 export GOPATH="$HOME/go"
-export PATH="$GOPATH/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH"
 
 # git
 alias ga="git add -p"
@@ -31,3 +45,6 @@ alias vim=nvim
 source <(fzf --zsh)
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+autoload -U compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'

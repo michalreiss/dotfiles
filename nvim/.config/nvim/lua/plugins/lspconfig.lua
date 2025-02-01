@@ -13,7 +13,7 @@ return {
                 "williamboman/mason-lspconfig.nvim",
                 config = function()
                     require("mason-lspconfig").setup({
-                        ensure_installed = { "lua_ls", "gopls", "elixirls", "htmx", "templ" },
+                        ensure_installed = { "lua_ls", "gopls", "htmx", "templ", "terraformls" },
                     })
                 end,
             },
@@ -30,15 +30,21 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
             local capabilities = require("blink.cmp").get_lsp_capabilities()
+            local util = require("lspconfig.util")
 
             lspconfig.lua_ls.setup({ capabilities = capabilities })
             lspconfig.gopls.setup({ capabilities = capabilities })
-            lspconfig.htmx.setup({ capabilities = capabilities })
-            lspconfig.templ.setup({ capabilities = capabilities })
             lspconfig.terraformls.setup({ capabilities = capabilities })
-            lspconfig.elixirls.setup({
+            lspconfig.htmx.setup({ capabilities = capabilities })
+            lspconfig.templ.setup({
                 capabilities = capabilities,
-                cmd = { "$HOME/.local/share/nvim/mason/packages/elixir-ls/language_server.sh" },
+                default_config = {
+                    cmd = { "templ", "lsp" },
+                    filetypes = { "templ" },
+                    root_dir = function(fname)
+                        return util.root_pattern("go.work", "go.mod", ".git")(fname)
+                    end,
+                },
             })
 
             vim.filetype.add({ extension = { templ = "templ" } })
