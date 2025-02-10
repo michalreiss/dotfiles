@@ -36,15 +36,6 @@ return {
             lspconfig.gopls.setup({ capabilities = capabilities })
             lspconfig.terraformls.setup({ capabilities = capabilities })
             lspconfig.htmx.setup({ capabilities = capabilities, })
-            lspconfig.sourcekit.setup({
-                capabilities = {
-                    workspace = {
-                        didChangeWatchedFiles = {
-                            dynamicRegistration = true,
-                        },
-                    },
-                }
-            })
             lspconfig.templ.setup({
                 capabilities = capabilities,
                 default_config = {
