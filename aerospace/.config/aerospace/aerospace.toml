@@ -46,7 +46,7 @@ if.app-name-regex-substring = 'finder'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id="com.mitchellh.ghostty"
+if.app-name-regex-substring = 'WezTerm'
 run= 'move-node-to-workspace dev'
 
 [[on-window-detected]]
