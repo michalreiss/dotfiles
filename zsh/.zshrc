@@ -1,5 +1,3 @@
-# vi mode
-bindkey -v
 bindkey '^y' autosuggest-accept
 
 # history
