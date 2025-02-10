@@ -8,11 +8,5 @@ config.enable_scroll_bar = false
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
 config.window_decorations = "RESIZE"
-config.window_padding = {
-    left = 10,
-    right = 10,
-    top = 10,
-    bottom = 0,
-}
 
 return config
