@@ -13,7 +13,7 @@ return {
                 "williamboman/mason-lspconfig.nvim",
                 config = function()
                     require("mason-lspconfig").setup({
-                        ensure_installed = { "lua_ls", "gopls", "htmx", "templ", "terraformls" },
+                        ensure_installed = { "lua_ls", "omnisharp", "gopls", "htmx", "templ", "terraformls" },
                     })
                 end,
             },
@@ -35,7 +35,14 @@ return {
             lspconfig.lua_ls.setup({ capabilities = capabilities })
             lspconfig.gopls.setup({ capabilities = capabilities })
             lspconfig.terraformls.setup({ capabilities = capabilities })
-            lspconfig.htmx.setup({ capabilities = capabilities, })
+            lspconfig.htmx.setup({ capabilities = capabilities })
+            lspconfig.omnisharp.setup({
+                capabilities = capabilities,
+                enable_roslyn_analysers = true,
+                enable_import_completion = true,
+                organize_imports_on_format = true,
+                enable_decompilation_support = true,
+            })
             lspconfig.templ.setup({
                 capabilities = capabilities,
                 default_config = {

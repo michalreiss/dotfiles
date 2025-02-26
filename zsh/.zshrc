@@ -18,7 +18,7 @@ eval "$(starship init zsh)"
 
 # GO
 export GOPATH="$HOME/go"
-export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH:/Users/michalreiss/.dotnet/tools"
 
 # git
 alias ga="git add -p"
