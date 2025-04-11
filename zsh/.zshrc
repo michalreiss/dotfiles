@@ -18,7 +18,7 @@ eval "$(starship init zsh)"
 
 # GO
 export GOPATH="$HOME/go"
-export PATH="$HOME/.cargo/bin:$GOPATH/bin:$PATH:/Users/michalreiss/.dotnet/tools"
+export PATH="$HOME/.cargo/bin:$GOPATH/bin:/opt/homebrew/opt/dotnet@8/bin:/Users/michalreiss/.dotnet/tools:$PATH"
 
 # git
 alias ga="git add -p"
@@ -46,3 +46,7 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 autoload -U compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

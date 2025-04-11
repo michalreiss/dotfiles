@@ -10,10 +10,28 @@ return {
                 end,
             },
             {
+                "Hoffs/omnisharp-extended-lsp.nvim",
+                config = function()
+                    local e = require("omnisharp_extended")
+                    vim.keymap.set("n", "gd", e.lsp_definition, {})
+                    vim.keymap.set("n", "gr", e.lsp_references, {})
+                    vim.keymap.set("n", "gri", e.lsp_implementation, {})
+                end,
+            },
+            {
                 "williamboman/mason-lspconfig.nvim",
                 config = function()
                     require("mason-lspconfig").setup({
-                        ensure_installed = { "lua_ls", "omnisharp", "gopls", "htmx", "templ", "terraformls" },
+                        automatic_installation = true,
+                        ensure_installed = {
+                            "lua_ls",
+                            "omnisharp",
+                            "gopls",
+                            "templ",
+                            "terraformls",
+                            "ts_ls",
+                            "angularls",
+                        },
                     })
                 end,
             },
@@ -34,8 +52,6 @@ return {
 
             lspconfig.lua_ls.setup({ capabilities = capabilities })
             lspconfig.gopls.setup({ capabilities = capabilities })
-            lspconfig.terraformls.setup({ capabilities = capabilities })
-            lspconfig.htmx.setup({ capabilities = capabilities })
             lspconfig.omnisharp.setup({
                 capabilities = capabilities,
                 enable_roslyn_analysers = true,
@@ -43,6 +59,9 @@ return {
                 organize_imports_on_format = true,
                 enable_decompilation_support = true,
             })
+            lspconfig.angularls.setup({})
+            lspconfig.ts_ls.setup({})
+            lspconfig.terraformls.setup({ capabilities = capabilities })
             lspconfig.templ.setup({
                 capabilities = capabilities,
                 default_config = {
