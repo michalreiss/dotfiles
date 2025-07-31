@@ -13,9 +13,24 @@ return {
                 "Hoffs/omnisharp-extended-lsp.nvim",
                 config = function()
                     local e = require("omnisharp_extended")
-                    vim.keymap.set("n", "gd", e.lsp_definition, {})
-                    vim.keymap.set("n", "gr", e.lsp_references, {})
-                    vim.keymap.set("n", "gri", e.lsp_implementation, {})
+
+                    vim.api.nvim_create_autocmd("LspAttach", {
+                        callback = function(args)
+                            local client = vim.lsp.get_client_by_id(args.data.client_id)
+                            if client ~= nil and client.name ~= "omnisharp" then
+                                return
+                            end
+
+                            local buf = args.buf
+                            local function map(lhs, rhs, desc)
+                                vim.keymap.set("n", lhs, rhs, { buffer = buf, noremap = true, desc = desc })
+                            end
+
+                            map("gd", e.lsp_definition, "OmniSharp: Go to definition")
+                            map("gr", e.lsp_references, "OmniSharp: Go to references")
+                            map("gri", e.lsp_implementation, "OmniSharp: Go to implementation")
+                        end,
+                    })
                 end,
             },
             {
@@ -51,7 +66,14 @@ return {
             local util = require("lspconfig.util")
 
             lspconfig.lua_ls.setup({ capabilities = capabilities })
-            lspconfig.gopls.setup({ capabilities = capabilities })
+            lspconfig.gopls.setup({
+                capabilities = capabilities,
+                settings = {
+                    gopls = {
+                        staticcheck = true,
+                    },
+                },
+            })
             lspconfig.omnisharp.setup({
                 capabilities = capabilities,
                 enable_roslyn_analysers = true,
