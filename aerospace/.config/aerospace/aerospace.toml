@@ -54,7 +54,7 @@ if.app-name-regex-substring = 'Slack|Safari'
 run = 'move-node-to-workspace web'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Messenger|Mail'
+if.app-name-regex-substring = 'WhatsApp|Mail'
 run = 'move-node-to-workspace personal'
 
 [[on-window-detected]]
