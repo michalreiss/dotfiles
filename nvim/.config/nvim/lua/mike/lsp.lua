@@ -1,8 +1,9 @@
 -- lsp
 vim.lsp.enable({
-    "lua",
-    "go",
-    "html",
-    "htmx",
-    "templ",
+	"lua",
+	"go",
+	"html",
+	"htmx",
+	"python",
+	"templ",
 })
