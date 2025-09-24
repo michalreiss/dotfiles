@@ -50,3 +50,5 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+. "$HOME/.local/bin/env"
