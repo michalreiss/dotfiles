@@ -42,6 +42,10 @@ automatically-unhide-macos-hidden-apps = false
 # run = ['layout floating', 'move-node-to-workspace S']  # The callback itself
 
 [[on-window-detected]]
+if.app-name-regex-substring = 'Slack'
+run = 'move-node-to-workspace slack'
+
+[[on-window-detected]]
 if.app-name-regex-substring = 'finder'
 run = 'layout floating'
 
@@ -50,7 +54,7 @@ if.app-name-regex-substring = 'Ghostty'
 run= 'move-node-to-workspace dev'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Slack|Safari'
+if.app-name-regex-substring = 'Safari'
 run = 'move-node-to-workspace web'
 
 [[on-window-detected]]
@@ -58,7 +62,7 @@ if.app-name-regex-substring = 'WhatsApp|Mail'
 run = 'move-node-to-workspace personal'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Music|ChatGPT'
+if.app-name-regex-substring = 'Music'
 run = 'move-node-to-workspace music'
 
 # Possible values: (qwerty|dvorak)
@@ -140,6 +144,7 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
+alt-0 = 'workspace slack'
 alt-1 = 'workspace dev'
 alt-2 = 'workspace web'
 alt-3 = 'workspace personal'
@@ -147,6 +152,7 @@ alt-4 = 'workspace music'
 alt-equal = ['join-with left', 'layout accordion vertical']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
+alt-shift-0 = 'move-node-to-workspace slack --focus-follows-window'
 alt-shift-1 = 'move-node-to-workspace dev --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace web --focus-follows-window'
 alt-shift-3 = 'move-node-to-workspace personal --focus-follows-window'

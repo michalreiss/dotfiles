@@ -2,12 +2,16 @@
 vim.g.have_nerd_font = true
 vim.g.mapleader = " "
 vim.opt.clipboard = "unnamedplus"
+vim.opt.colorcolumn = "80"
 vim.opt.ignorecase = true
 vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
 vim.opt.swapfile = false
 vim.opt.tabstop = 4
+vim.opt.textwidth = 80
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false
