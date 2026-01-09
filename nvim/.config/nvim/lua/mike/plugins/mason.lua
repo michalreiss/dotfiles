@@ -11,6 +11,7 @@ return {
 			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"goimports-reviser",
+					"golangci-lint",
 					"gopls",
 					"html-lsp",
 					"htmx-lsp",
