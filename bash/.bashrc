@@ -26,9 +26,5 @@ alias cat=bat
 alias ls="ls --color=auto"
 alias la="ls -lAh"
 
-alias esp_build="arduino-cli compile --fqbn esp8266:esp8266:generic ."
-alias esp_upload="arduino-cli upload -p /dev/esp8266 --fqbn esp8266:esp8266:generic ."
-alias esp_monitor="arduino-cli monitor -p /dev/esp8266 -c 115200"
-
 export EDITOR=nvim
 export PATH="$HOME/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:/usr/local/go/bin:$PATH"
