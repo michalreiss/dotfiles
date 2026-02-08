@@ -15,9 +15,8 @@ vim.lsp.enable({
 	"lua",
 	"go",
 	"html",
-	"htmx",
 	"python",
-	"templ",
+	"arduino",
 })
 
 vim.keymap.set("n", "<leader>lr", RestartLSP, { desc = "Restart LSP for current buffer" })
