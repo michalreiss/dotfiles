@@ -14,12 +14,9 @@ return {
 					"golangci-lint",
 					"gopls",
 					"html-lsp",
-					"htmx-lsp",
 					"lua-language-server",
 					"python-lsp-server",
 					"staticcheck",
-					"templ",
-					"terraform-ls",
 				}
 			})
 		end
