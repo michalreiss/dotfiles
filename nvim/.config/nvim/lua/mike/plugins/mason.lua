@@ -10,6 +10,8 @@ return {
 		config = function()
 			require("mason-tool-installer").setup({
 				ensure_installed = {
+					"arduino-language-server",
+					"clangd",
 					"goimports-reviser",
 					"golangci-lint",
 					"gopls",

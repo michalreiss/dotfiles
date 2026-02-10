@@ -27,3 +27,4 @@ alias ls="ls --color=auto"
 alias la="ls -lAh"
 
 export EDITOR=nvim
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:/usr/local/go/bin:$PATH"
