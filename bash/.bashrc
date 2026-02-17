@@ -5,6 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+set -o vi
+
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  fi
+fi
+
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 
@@ -26,5 +34,7 @@ alias cat=bat
 alias ls="ls --color=auto"
 alias la="ls -lAh"
 
+alias tmuxs="tmux new-session -s"
+
 export EDITOR=nvim
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/go/bin:/usr/local/bin:/usr/local/go/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$(go env GOPATH)/bin:$PATH"
