@@ -15,6 +15,7 @@ fi
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
+eval "$(zoxide init bash)"
 
 # git
 alias ga="git add -p"
@@ -31,7 +32,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 
 alias cat=bat
-alias ls="ls --color=auto"
+alias ls="eza --icons --group-directories-first"
 alias la="ls -lAh"
 
 alias tmuxs="tmux new-session -s"
