@@ -11,7 +11,6 @@ vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
 vim.opt.swapfile = false
 vim.opt.tabstop = 4
-vim.opt.textwidth = 80
 vim.opt.undofile = true
 vim.opt.winborder = "rounded"
 vim.opt.wrap = false

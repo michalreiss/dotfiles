@@ -5,8 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-set -o vi
-
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
@@ -16,6 +14,11 @@ fi
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
+
+function precommit() {
+  golangci-lint run
+  govulncheck -show verbose ./...
+}
 
 # git
 alias ga="git add -p"
